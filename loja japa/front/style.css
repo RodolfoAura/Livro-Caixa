@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+table {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+body {
+    overflow: hidden;
+}
+
+hr {
+    margin: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+td {
+    border: 1px solid;
+    height: 4vh;
+}
+
+.model {
+    display: none;
+    visibility: hidden;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 15px;
+}
+
+.tabelas{
+    display: flex;
+    overflow: auto;
+    height: 600px;
+    width:55vw;
+    overflow-y: scroll;
+    margin-left: 450px;
+
+}
+
+button{
+    padding-left: 25px;
+    background: none;
+    border:none;
+}
+
+.dindins{
+    margin-top:10vh;
+    margin-left:49vw;
+}
+
+#dataD,#valorD,#descricaoD,#valor,#descricao,#data{
+    width: 6vw;
+    text-align: center;
+}
+
+#lancamento,#lancamentoD,#tipo,#tipoD{
+    text-align: center;
+}
+
+.modal{
+    height: 20vh;
+    width: 10vw;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    border: 2px solid black;
+
+}
+
+.fechar{
+    background-color: rgb(255, 0, 0);
+    margin-left: 8vw;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.position{
+    display: flex;
+    justify-content: center;
+    
+}

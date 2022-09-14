@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Do Japa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="getTabela(),filtrarDatas()">
+    <h1>Livro Caixa</h1>
+
+    <hr>
+    <br>
+
+    <div class="info">
+        <p>Filtro: <input type="date" onchange="filtrarDatas(this.value)"></p>
+        <p><button onclick="mostrarModal()"> <img src="../botao-adicionar.png" alt=""></button>Lançar Produto</p>
+        
+    </div>
+    <div class="position">
+    <div class="modal">
+        <button type="button" class ="fechar" onclick="fecharModal()">
+            <p>x</p>
+        </button>
+        <p>Descrição</p>
+        <input id="des" type="text">
+        <P>Tipo</P>
+        <select id="selected">
+            <option value="D">Débito</option>
+            <option value="C">Crédito</option>
+        </select>
+        <p>Valor</p>
+        <input id="Valor" type="number">
+        <button onclick="cadastrar()">Lançar</button>
+    </div>
+</div>
+    <hr>
+    <br>
+   
+
+    <div class="tabelas">
+        <table class="credito">
+            <thead>
+                <tr>
+                    <th>N°lancamento</th>
+                    <th>data</th>
+                    <th>descricao</th>
+                    <th>valor</th>
+                    <th>tipo</th>
+                </tr>
+            </thead>
+            <tbody id="lista-produtos">
+                <tr class="linhamodelo model">
+                    <td id="lancamento"></td>
+                    <td id="data"></td>
+                    <td id="descricao"></td>
+                    <td id="valor"></td>
+                    <td id="tipo"></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="debito">
+            <thead>
+                <tr>
+                    <th>N°lancamento</th>
+                    <th>data</th>
+                    <th>descricao</th>
+                    <th>valor</th>
+                    <th>tipo</th>
+                </tr>
+            </thead>
+            <tbody id="lista-produtosD">
+                <tr class="linhamodeloD model">
+                    <td id="lancamentoD"></td>
+                    <td id="dataD"></td>
+                    <td id="descricaoD"></td>
+                    <td id="valorD"></td>
+                    <td id="tipoD"></td>
+                </tr>
+            </tbody>
+    </div>
+    </table>
+    </div>
+    <div class="dindins">
+        <div class="saldo model">
+            <p>Saldo :</p>
+            <p id="soma"><input type="text"></p>
+        </div>
+    </div>
+    <div class="modal">
+        <button type="button" class = "fechar" onclick="fecharModal()"></button>
+
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
